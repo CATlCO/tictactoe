@@ -1,0 +1,188 @@
+@import url(https://fonts.googleapis.com/css?family=Rock+Salt);
+@import url(https://fonts.googleapis.com/css?family=Chango);
+
+$bg-col: #1E1E20;
+$cell-size: 100px;
+$table-size: $cell-size*3.8;
+$color: rgb(172, 79, 115);
+
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: 'Chango';
+  color: rgb(254, 158, 150);
+}
+body {
+  background-color: $bg-col;
+}
+h1 {
+  margin-top: 30px;
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
+  color: $color;
+}
+.table {
+  margin: 30px auto;
+  // background-color: $bg-col;
+  width: $table-size;
+  text-align: center;
+  // padding: $table-size*0.05;
+  // border-radius: 20px;
+  // box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.75);
+  display: none;
+  // background-color: $bg-col;
+}
+.row {
+  display: block;
+  font-size: 0;
+}
+.row > div {  
+  display: inline-block;
+  width: $cell-size;
+  height: $cell-size;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  // box-shadow: inset 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+  // border-radius: 20px;
+  // margin: $cell-size*0.05;
+}
+.choose {
+  width: 500px;
+  height: 250px;
+  text-align: center;
+  background-color: $bg-col;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+button {
+  background-color: $bg-col;
+  border: none;
+  color: $color;
+  width: 100px;
+  height: 100px;
+  font-family: inherit;
+  font-size: 40px;
+  margin: 70px;
+  box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+}
+.score {
+  background-color: $bg-col;
+  color: $color;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 30px;
+}
+.you, .pc {
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+}
+
+$shadow: none;
+
+.circle {
+  height: 90%;
+  width: 90%;
+  margin: 5% auto;
+  position: relative;
+  box-shadow: $shadow;
+  border-radius: 20px;
+  // background-image: radial-gradient(80% 80% ellipse at 30% 40%, #2FFEFF, #125F5F);
+  background-image: radial-gradient(80% 80% ellipse at 30% 40%, rgb(254, 158, 150), rgb(172, 79, 115));
+
+}
+.circle-inner {
+  background-color: $bg-col;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset $shadow;
+}
+.cross {
+  width: 0; 
+  height: 0; 
+  position: absolute;
+}
+.c2 {
+  position: absolute;
+  top: 0;
+}
+
+$size: 0;
+
+.top-left {
+  border-right: $size solid transparent; 
+  border-bottom: $size solid transparent; 
+  border-top: $size solid $bg-col;
+  box-shadow: inset $shadow;
+}
+.top {
+  border-left: $size solid transparent; 
+  border-right: $size solid transparent; 
+  border-top: $size solid $bg-col;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: inset $shadow;
+}
+.top-right {
+  border-left: $size solid transparent; 
+  border-bottom: $size solid transparent; 
+  border-top: $size solid $bg-col;
+  right: 0;
+  box-shadow: inset $shadow;
+}
+.left {
+  border-top: $size solid transparent; 
+  border-bottom: $size solid transparent; 
+  border-left: $size solid $bg-col;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: inset $shadow;
+}
+.right {
+  border-top: $size solid transparent; 
+  border-bottom: $size solid transparent; 
+  border-right: $size solid $bg-col;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  box-shadow: inset $shadow;
+}
+.bot-left {
+  border-top: $size solid transparent; 
+  border-right: $size solid transparent; 
+  border-bottom: $size solid $bg-col;
+  bottom: 0;
+  box-shadow: inset $shadow;
+}
+.bot {
+  border-left: $size solid transparent; 
+  border-right: $size solid transparent; 
+  border-bottom: $size solid $bg-col;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: inset $shadow;
+}
+.bot-right {
+  border-top: $size solid transparent; 
+  border-left: $size solid transparent; 
+  border-bottom: $size solid $bg-col;
+  bottom: 0;
+  right: 0;
+  box-shadow: inset $shadow;
+}

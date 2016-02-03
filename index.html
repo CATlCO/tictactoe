@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" type="text/css" href="../../templates/reset.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootsdivapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="index.js"></script>
+    
+  </head>
+  <body>
+    
+    <div class="choose">
+      <button id="cross">X</button>
+      <button id="circle">O</button>
+    </div>
+    <div class="score">
+      <div class="labels">
+        <div class="you">You</div>
+        <div class="pc">PC</div>
+      </div>
+      <div class="stats">
+        <div class="you" id="you">0</div>:
+        <div class="pc" id="pc">0</div>
+      </div>
+    </div>
+    <h1>Tic Tac Toe</h1>
+    <div class="table">
+      <div class="row">
+        <div class="td" id="c1">
+          <div class="circle c1">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div>
+         <!--  <div class="circle c2">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div> -->
+        </div>
+        <div class="td" id="c2">
+          <div class="circle c1">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div>
+        <!--   <div class="circle c2">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div> -->
+        </div>
+        <div class="td" id="c3">
+          <div class="circle c1">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div>
+         <!--  <div class="circle c2">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="td" id="c4">
+          <div class="circle c1">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div>
+        <!--   <div class="circle c2">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div> -->
+        </div>
+        <div class="td" id="c5">
+          <div class="circle c1">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div>
+        <!--   <div class="circle c2">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div> -->
+        </div>
+        <div class="td" id="c6">
+          <div class="circle c1">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div>
+        <!--   <div class="circle c2">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div> -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="td" id="c7">
+          <div class="circle c1">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div>
+      <!--     <div class="circle c2">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div> -->
+        </div>
+        <div class="td" id="c8">
+          <div class="circle c1">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div>
+         <!--  <div class="circle c2">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div> -->
+        </div>
+        <div class="td" id="c9">
+          <div class="circle c1">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div>
+        <!--   <div class="circle c2">
+            <div class="cross top-left"></div>
+            <div class="cross top"></div>
+            <div class="cross top-right"></div>
+            <div class="cross right"></div>
+            <div class="cross bot-right"></div>
+            <div class="cross bot"></div>
+            <div class="cross bot-left"></div>
+            <div class="cross left"></div>
+            <div class="circle-inner"></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
