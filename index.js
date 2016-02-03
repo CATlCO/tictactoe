@@ -116,7 +116,6 @@ function restartGame() {
   TweenLite.to($('.cross'), dur, { borderWidth: 0, borderRadius: 0, ease: Elastic.easeIn })
   TweenLite.to($('.circle'), dur, { borderRadius: '20px', ease: Elastic.easeIn })
   TweenLite.to($('.circle-inner'), dur, { width: 0, height: 0, ease: Elastic.easeIn });
-  // restart = true;
 }
 
 $(document).ready(function(){
@@ -136,7 +135,6 @@ $(document).ready(function(){
     if (free(no)){
       you.value.push(no);
       fillValue(you, no);
-      // restart = false;
     }
   })
 });
